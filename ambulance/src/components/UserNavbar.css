@@ -1,0 +1,37 @@
+body {
+    /* background-color: #090707; Fallback color in case background image fails to load */
+    color: #333; /* Ensure text color is readable against the background */
+}
+/* Sidebar Styles */
+.navbar {
+    height: 100vh; /* Full height */
+    width: 200px; /* Width of the sidebar */
+    position: fixed; /* Fix the sidebar position */
+    top: 0;
+    left: 0;
+    padding: 0.25rem; /* Padding around the content */
+    background-color: #003366; /* Dark blue background color */
+    flex-direction: column; /* Stack items vertically */
+    z-index: 1000;
+}
+.navbar-brand {
+    margin-bottom: 2rem; /* Space between logo and menu */
+}
+.navbar-brand img {
+    width: 100px; /* Set width for the logo (same as in admin.html) */
+    margin-bottom: 0px; /* Space between the logo and the links */
+}
+.navbar-nav .nav-link {
+    padding: 1rem; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+    color: #fff; /* White text color */
+    display: flex;
+    align-items: center;
+}
+.navbar-nav .nav-link i {
+    margin-right: 0.75rem; /* Space between icon and text */
+}
+.navbar-nav .nav-link:hover {
+    background-color: #004080; /* Slightly lighter blue on hover */
+    border-radius: 5px;
+}

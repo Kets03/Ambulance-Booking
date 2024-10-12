@@ -1,0 +1,34 @@
+body {
+    margin-left: 160px;
+    background-color: #eaf2f8; /* Light blue background color for the page */
+    color: #9ac1cd; /* Black text color for the page */
+}
+.card {
+    background-color: #b8d0f2; /* Darker blue background color for cards */
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+.card h5 {
+    margin-bottom: 1rem;
+    color: #000; /* Black color for card titles */
+}
+.card-text {
+    color: #0b0b0b; /* Black color for card text */
+}
+h1 {
+    color: #000; /* Black color for the main heading */
+}
