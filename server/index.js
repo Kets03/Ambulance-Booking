@@ -309,75 +309,7 @@ app.post('/book-ambulance/:ambulanceId', async (req, res) => {
   }
 });
 
-// app.get('/driver-ride-requests', async (req, res) => {
-//   const driverId = req.session.user?.id;
-//   console.log('Driver ID:', driverId); // Debugging
-//   if (!driverId) {
-//     return res.status(400).json({ message: 'Driver ID not found in session' });
-//   }
-
-//   try {
-//     const rideRequests = await bookingModel
-//       .find({ driverId: driverId, status:"pending" })
-//       .populate('userId', 'name email');
-
-//     if (rideRequests.length === 0) {
-//       return res.status(404).json({ message: 'No ride requests found for this driver' });
-//     }
-
-//     res.status(200).json(rideRequests);
-//   } catch (error) {
-//     console.error('Detailed error:', error); // Log the error for debugging
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
-// app.post('/accept-ride/:requestId', async (req, res) => {
-//   const { requestId } = req.params;
-//   const driverId = req.session.user?.id;
-
-//   try {
-//     // Find the booking and ensure it's assigned to the correct driver
-//     const booking = await bookingModel.findOne({ _id: requestId, driverId: driverId });
-
-//     if (!booking) {
-//       return res.status(404).json({ message: 'Ride request not found or not assigned to this driver' });
-//     }
-
-//     // Update the booking status to 'accepted'
-//     booking.status = 'accepted';
-//     await booking.save();
-
-//     res.status(200).json({ message: 'Ride request accepted successfully' });
-//   } catch (error) {
-//     console.error('Error accepting ride request:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
-// app.post('/reject-ride/:requestId', async (req, res) => {
-//   const { requestId } = req.params;
-//   const driverId = req.session.user?.id;
-
-//   try {
-//     // Find the booking and ensure it's assigned to the correct driver
-//     const booking = await bookingModel.findOne({ _id: requestId, driverId: driverId });
-
-//     if (!booking) {
-//       return res.status(404).json({ message: 'Ride request not found or not assigned to this driver' });
-//     }
-
-//     // Update the booking status to 'rejected'
-//     booking.status = 'rejected';
-//     await booking.save();
-
-//     res.status(200).json({ message: 'Ride request rejected successfully' });
-//   } catch (error) {
-//     console.error('Error rejecting ride request:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
+//driver ride requests
 app.get("/driver-ride-requests", async (req, res) => {
   const driverId = req.session.user?.id; // Assuming you store user id in session
 
