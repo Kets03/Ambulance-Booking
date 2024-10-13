@@ -1,51 +1,5 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-// export default function CurrentRide() {
-//   const [currentRide, setCurrentRide] = useState(null);
-//   const [errorMessage, setErrorMessage] = useState('');
-
-//   useEffect(() => {
-//     const fetchCurrentRide = async () => {
-//       try {
-//         const response = await axios.get('http://localhost:3001/current-ride', { withCredentials: true });
-//         setCurrentRide(response.data);
-//       } catch (error) {
-//         if (error.response && error.response.status === 404) {
-//           setErrorMessage('No accepted ride found.');
-//         } else {
-//           console.error('Error fetching current ride:', error);
-//           setErrorMessage('An error occurred while fetching the current ride.');
-//         }
-//       }
-//     };
-
-//     fetchCurrentRide();
-//   }, []);
-
-//   return (
-//     <div className="container">
-//       <h1>Current Ride</h1>
-//       {errorMessage ? (
-//         <p>{errorMessage}</p>
-//       ) : (
-//         currentRide && (
-//           <div className="card">
-//             <div className="card-body">
-//               <h5 className="card-title">Ride Details</h5>
-//               <p><strong>Passenger:</strong> {currentRide.userId.name}</p>
-//               <p><strong>Email:</strong> {currentRide.userId.email}</p>
-//               <p><strong>Phone:</strong> {currentRide.userId.phone}</p>
-//               <p><strong>Pickup Location:</strong> {currentRide.pickupLocation}</p>
-//               <p><strong>Drop Location:</strong> {currentRide.dropLocation}</p>
-//             </div>
-//           </div>
-//         )
-//       )}
-//     </div>
-//   );
-// }
 import React, { useEffect, useState } from 'react';
+import "./CurrentRide.css";
 import axios from 'axios';
 
 export default function CurrentRide() {
@@ -88,8 +42,7 @@ export default function CurrentRide() {
     <div className="container">
       <h1>Current Ride</h1>
       {errorMessage ? (
-        <p style={{ textAlign: 'center', fontWeight: 'bold', marginTop: '20px' }}>{errorMessage}</p>
-
+        <p>{errorMessage}</p>
       ) : (
         currentRide && (
           <div className="card">

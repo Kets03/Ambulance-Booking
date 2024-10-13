@@ -2,3 +2,14 @@
     margin-left: 50px;
     color: white;
 }
+.filter-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #9fc1e4;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    color: #073057;
+  }
