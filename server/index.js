@@ -408,7 +408,7 @@ app.get('/current-ride', async (req, res) => {
 });
 
 app.post("/end-ride/:requestId", async (req, res) => {
-  const { requestId } = req.params;
+  const { requestId }  = req.params;
 
   try {
     const updatedBooking = await bookingModel.findByIdAndUpdate(
@@ -427,6 +427,7 @@ app.post("/end-ride/:requestId", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 app.listen(PORT, () => {
   console.log("server is running");
 });
