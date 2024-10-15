@@ -55,6 +55,8 @@ export default function RideHistory() {
           <option value="completed">Completed</option>
           <option value="ongoing">Ongoing</option>
           <option value="rejected">Rejected</option>
+          <option value="accepted">Accepted</option>
+          <option value="cancelled">Cancelled</option>
         </select>
       </div>
 

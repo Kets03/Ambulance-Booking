@@ -191,7 +191,7 @@ app.post('/updateDriverProfile', async (req, res) => {
     // Update the driver profile and set status to 'pending'
     const updatedDriver = await driverModel.findByIdAndUpdate(
       driverId,
-      { registrationNo, licenseNo,type, status: 'pending' }, // Update status to 'pending'
+      { registrationNo, licenseNo, type, status: 'pending' }, // Update status to 'pending'
       { new: true } // Return the updated document
     );
 
@@ -306,6 +306,55 @@ app.post('/book-ambulance/:ambulanceId', async (req, res) => {
   } catch (error) {
     console.error('Error booking ambulance:', error);
     res.status(500).json({ error: 'Error booking ambulance' });
+  }
+});
+
+// Update user profile (address, phone, etc.)
+app.post('/update', async (req, res) => {
+  try {
+    const userId = req.session.user.id;
+    const { phone, address } = req.body;
+    console.log(userId);
+    const updatedUser = await userModel.findByIdAndUpdate(
+      userId,
+      { phone, address },
+      { new: true } // Return the updated document
+    );
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500).send("Error updating user profile.");
+  }
+});
+
+app.get('/my-bookings', async (req, res) => {
+  try {
+    const userId = req.session.user.id; // Assuming you have user session set
+    const bookings = await bookingModel.find({ userId })
+    .populate("driverId", "name email phone");
+    res.json(bookings);
+  } catch (error) {
+    res.status(500).send('Error fetching bookings.');
+  }
+});
+
+app.put('/cancel-booking/:id', async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+  try {
+    const updatedBooking = await bookingModel.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+    if (!updatedBooking) {
+      return res.status(404).json({ message: 'Booking not found.' });
+    }
+    res.json(updatedBooking);
+  } catch (error) {
+    res.status(500).send('Error updating booking status.');
   }
 });
 

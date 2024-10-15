@@ -45,7 +45,7 @@ export default function UserNavbar() {
             </li>
             {isLoggedin && (
               <li className="nav-item">
-                <button className="btn btn-outline-light mt-auto" onClick={Logout}>
+                <button className="btn btn-outline-light mt-5" onClick={Logout}>
                   <i className="fas fa-sign-out-alt"></i> Logout
                 </button>
               </li>
