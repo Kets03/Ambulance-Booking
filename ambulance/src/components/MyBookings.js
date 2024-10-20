@@ -49,6 +49,8 @@ export default function MyBookings() {
             : booking
         )
       );
+      setFilteredBookings(filteredBookings.filter((booking) => booking._id !== bookingId));
+      alert("Booking Cancelled!");
     } catch (error) {
       console.error("Error cancelling booking:", error);
     }

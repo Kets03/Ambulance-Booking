@@ -2,13 +2,14 @@
     padding: 20px;
     margin: 10px 10px 10px 50px;
     background-color: #073057;
+    border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .filter-container {
     margin-bottom: 20px;
-    color: #073057;
-    display: flex; /* This keeps the label and select next to each other */
-    align-items: center; /* Aligns the label and select vertically centered */
+    display: flex;
+    align-items: center;
   }
   .content-container {
     border: 1px solid #ccc;
@@ -38,5 +39,6 @@
   
   p {
     margin: 0;
+    color: #fff;
   }
   

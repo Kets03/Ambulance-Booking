@@ -1,7 +1,10 @@
 .container {
     padding: 20px;
+    color: #fff
   }
-  
+.filter-container{
+  color: #fff;
+}
   .booking-list {
     border: 1px solid #ccc;
     padding: 20px;
