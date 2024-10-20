@@ -74,7 +74,7 @@ export default function MyBookings() {
   return (
     <div className="container">
       <h1>My Bookings</h1>
-      <div className="content-container">
+      
         {/* Filter Dropdown */}
         <div className="filter-container">
           <label htmlFor="filter">Filter by Status: </label>
@@ -155,7 +155,6 @@ export default function MyBookings() {
             <p>No bookings available for this filter.</p>
           )}
         </div>
-      </div>
     </div>
   );
 }

@@ -1,3 +1,81 @@
-.container{
+/* .container{
     margin-left: 50px;
 }
+.list-group-item {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+h2{
+    color: #073057;
+} */
+/* BookingOverview.css */
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Make the cards smaller for compact view */
+    grid-gap: 15px; /* Reduce the gap between cards */
+  }
+  
+  .driver-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 16px; /* Reduced font size for headings */
+    margin-bottom: 10px;
+    color: #073057;
+  }
+  
+  .list-group {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list-group-item {
+    padding: 10px; /* Compact padding */
+    margin-bottom: 8px; /* Reduce space between list items */
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #ddd;
+    font-size: 14px; /* Smaller font size for the content */
+  }
+  
+  .list-group-item .btn {
+    margin-left: auto;
+  }
+  
+  .details {
+    margin-top: 8px; /* Reduced space */
+    font-size: 13px; /* Make the details font smaller */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    font-size: 12px; /* Smaller button */
+    padding: 5px 10px; /* Compact button padding */
+  }
+  
+  .driver-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures the layout is responsive and compact */
+    grid-gap: 20px;
+  }
+  
+  .details p {
+    margin-bottom: 5px; /* Reduce spacing between details paragraphs */
+  }
+  
+  

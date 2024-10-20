@@ -331,7 +331,7 @@ app.post('/update', async (req, res) => {
 
 app.get('/my-bookings', async (req, res) => {
   try {
-    const userId = req.session.user.id; // Assuming you have user session set
+    const userId = req.session.user.id; 
     const bookings = await bookingModel.find({ userId })
     .populate("driverId", "name email phone");
     res.json(bookings);
@@ -387,7 +387,17 @@ app.post("/accept-ride/:requestId", async (req, res) => {
     if (!updatedBooking) {
       return res.status(404).json({ message: "Ride request not found" });
     }
+    const driverId = updatedBooking.driverId;
 
+    const updatedDriver = await driverModel.findByIdAndUpdate(
+      driverId,
+      { isAvailable: false },
+      { new: true } // Return the updated driver document
+    );
+
+    if (!updatedDriver) {
+      return res.status(404).json({ message: "Driver not found" });
+    }
     res.status(200).json(updatedBooking); // Return the updated booking
   } catch (error) {
     console.error("Error accepting ride request:", error);
@@ -474,6 +484,19 @@ app.post("/end-ride/:requestId", async (req, res) => {
   } catch (error) {
     console.error("Error ending ride:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+app.get("/bookings", async (req,res) => {
+  try {
+    const bookings = await bookingModel.find({})
+      .populate('userId', 'name email')  // Populating user details
+      .populate('driverId', 'name phone'); // Populating driver details
+
+    return res.status(200).json(bookings);
+  } catch (error) {
+    console.error('Error fetching bookings:', error);
+    return res.status(500).json({ message: 'Server error' });
   }
 });
 
