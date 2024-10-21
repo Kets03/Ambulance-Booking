@@ -5,10 +5,6 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
-- [API Endpoints](#api-endpoints)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Future Enhancements](#future-enhancements)
 
 ## Introduction
 
