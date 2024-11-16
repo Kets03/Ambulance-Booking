@@ -44,7 +44,7 @@ export default function UserNavbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/Maps">
+              <a className="nav-link" href="/UserMaps">
                 <i className="fas fa-hospital"></i> Hospitals Nearby
               </a>
             </li>

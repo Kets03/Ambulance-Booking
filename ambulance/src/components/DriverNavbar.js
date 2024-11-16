@@ -48,6 +48,11 @@ export default function DriverNavbar() {
                 <i className="fas fa-calendar-check"></i> Ride Requests
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/DriverMaps">
+                <i className="fas fa-hospital"></i> Hospitals Nearby
+              </a>
+            </li>
             {isLoggedin && (
               <li className="nav-item">
                 <button className="btn btn-outline-light mt-5" onClick={Logout}>

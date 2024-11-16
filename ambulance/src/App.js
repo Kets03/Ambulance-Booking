@@ -22,7 +22,6 @@ import AdminNavbar from './components/AdminNavbar';
 import Adminprofile from './components/Adminprofile';
 import ManageAmbulances from './components/ManageAmbulances';
 import BookingOverview from './components/BookingOverview';
-import ReportsAnalytics from './components/ReportsAnalytics';
 
 
 
@@ -56,19 +55,18 @@ function App() {
         <Route path="/userdashboard" element={isLoggedin ? <><UserNavbar/><UserProfile/></> : <><Navbar/><Login /></>}/>
         <Route path="/BookAmbulance" element={isLoggedin ? <><UserNavbar/><BookAmbluance/></> : <><Navbar/><Login /></>}/>
         <Route path="/MyBookings" element={isLoggedin ? <><UserNavbar/><MyBookings/></> : <><Navbar/><Login /></>}/>
-
-        <Route path="/Maps" element={isLoggedin ? <><UserNavbar/><Map/></> : <><Navbar/><Login /></>}/>
+        <Route path="/UserMaps" element={isLoggedin ? <><UserNavbar/><Map/></> : <><Navbar/><Login /></>}/>
 
 
         <Route path="/driverdashboard" element={isLoggedin ? <><DriverNavbar/><Driverprofile/></> : <><Navbar/><Login /></>}/>
         <Route path="/CurrentRide" element={isLoggedin ? <><DriverNavbar/><CurrentRide/></> : <><Navbar/><Login /></>}/>
         <Route path="/RideHistory" element={isLoggedin ? <><DriverNavbar/><RideHistory/></> : <><Navbar/><Login /></>}/>
         <Route path="/RideRequests" element={isLoggedin ? <><DriverNavbar/><RideRequests/></> : <><Navbar/><Login /></>}/>
+        <Route path="/DriverMaps" element={isLoggedin ? <><DriverNavbar/><Map/></> : <><Navbar/><Login /></>}/>
 
         <Route path="/admindashboard" element={isLoggedin ? <><AdminNavbar/><Adminprofile/></> : <><Navbar/><Login /></>}/>
         <Route path="/ManageAmbulances" element={isLoggedin ? <><AdminNavbar/><ManageAmbulances/></> : <><Navbar/><Login /></>}/>
         <Route path="/BookingOverview" element={isLoggedin ? <><AdminNavbar/><BookingOverview/></> : <><Navbar/><Login /></>}/>
-        <Route path="/ReportsAnalytics" element={isLoggedin ? <><AdminNavbar/><ReportsAnalytics/></> : <><Navbar/><Login /></>}/>
       </Routes>
     </Router>
     </SetIsLoggedinContext.Provider>

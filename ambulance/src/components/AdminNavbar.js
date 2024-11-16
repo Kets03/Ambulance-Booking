@@ -43,11 +43,6 @@ export default function AdminNavbar() {
                 <i className="fas fa-calendar-check"></i> Booking overview
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/ReportsAnalytics">
-                <i className="fas fa-calendar-check"></i>Reports/Analytics
-              </a>
-            </li>
             {isLoggedin && (
               <li className="nav-item">
                 <button className="btn btn-outline-light mt-5" onClick={Logout}>
