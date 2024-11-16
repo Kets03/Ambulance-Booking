@@ -1,0 +1,15 @@
+.map-container {
+    background-color: lightgreen;
+    /* Debugging color */
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    /* Center the container */
+    border: 2px solid #ccc;
+    /* Optional: For debugging visibility */
+    border-radius: 10px;
+    /* Optional */
+    overflow: hidden;
+    /* Prevent overflow issues */
+    position: relative;
+}

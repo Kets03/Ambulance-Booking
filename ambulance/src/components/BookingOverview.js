@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 // import "./BookingOverview.css";
@@ -123,6 +124,8 @@
 //     </div>
 //   );
 // }
+=======
+>>>>>>> 6f759dc (Maps Implemented)
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./BookingOverview.css";

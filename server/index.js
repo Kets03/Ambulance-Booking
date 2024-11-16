@@ -500,6 +500,31 @@ app.get("/bookings", async (req,res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
+app.get("/bookings-date-wise", async (req, res) => {
+  try {
+    // Aggregate bookings by date
+    const bookings = await bookingModel.aggregate([
+      {
+        $group: {
+          _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
+          bookings: { $push: "$$ROOT" },  // Collects bookings for each date
+          count: { $sum: 1 },              // Counts total bookings for each date
+        }
+      },
+      { $sort: { _id: 1 } }  // Sorts results by date (ascending)
+    ]);
+
+    return res.status(200).json(bookings);
+  } catch (error) {
+    console.error("Error fetching date-wise bookings:", error);
+    return res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+>>>>>>> 6f759dc (Maps Implemented)
 app.listen(PORT, () => {
   console.log("server is running");
 });
