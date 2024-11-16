@@ -11,11 +11,7 @@ import UserNavbar from './components/UserNavbar';
 import UserProfile from './components/UserProfile';
 import BookAmbluance from './components/BookAmbluance';
 import MyBookings from './components/MyBookings';
-<<<<<<< HEAD
-=======
 import Map from './components/Map';
->>>>>>> 6f759dc (Maps Implemented)
-
 import DriverNavbar from './components/DriverNavbar';
 import Driverprofile from './components/DriverProfile';
 import CurrentRide from './components/CurrentRide';
@@ -60,10 +56,9 @@ function App() {
         <Route path="/userdashboard" element={isLoggedin ? <><UserNavbar/><UserProfile/></> : <><Navbar/><Login /></>}/>
         <Route path="/BookAmbulance" element={isLoggedin ? <><UserNavbar/><BookAmbluance/></> : <><Navbar/><Login /></>}/>
         <Route path="/MyBookings" element={isLoggedin ? <><UserNavbar/><MyBookings/></> : <><Navbar/><Login /></>}/>
-<<<<<<< HEAD
-=======
+
         <Route path="/Maps" element={isLoggedin ? <><UserNavbar/><Map/></> : <><Navbar/><Login /></>}/>
->>>>>>> 6f759dc (Maps Implemented)
+
 
         <Route path="/driverdashboard" element={isLoggedin ? <><DriverNavbar/><Driverprofile/></> : <><Navbar/><Login /></>}/>
         <Route path="/CurrentRide" element={isLoggedin ? <><DriverNavbar/><CurrentRide/></> : <><Navbar/><Login /></>}/>

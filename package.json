@@ -1,21 +1,14 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^5.3.3",
-=======
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.6",
->>>>>>> 6f759dc (Maps Implemented)
     "leaflet": "^1.9.4",
     "maplibre-gl": "^4.7.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
-<<<<<<< HEAD
-=======
     "react-chartjs-2": "^5.2.0",
->>>>>>> 6f759dc (Maps Implemented)
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1"
   }

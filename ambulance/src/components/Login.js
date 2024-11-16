@@ -33,11 +33,7 @@ export default function Login() {
   }
 
   return (
-<<<<<<< HEAD
     <div className="container mt-5">
-=======
-    <div className="container mt-3">
->>>>>>> 6f759dc (Maps Implemented)
       {/* Flexbox for equal height columns */}
       <div className="row justify-content-center d-flex align-items-stretch">
         {/* Login Section */}

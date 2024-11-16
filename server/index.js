@@ -500,8 +500,6 @@ app.get("/bookings", async (req,res) => {
   }
 });
 
-<<<<<<< HEAD
-=======
 app.get("/bookings-date-wise", async (req, res) => {
   try {
     // Aggregate bookings by date
@@ -524,7 +522,6 @@ app.get("/bookings-date-wise", async (req, res) => {
 });
 
 
->>>>>>> 6f759dc (Maps Implemented)
 app.listen(PORT, () => {
   console.log("server is running");
 });

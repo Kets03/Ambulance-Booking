@@ -43,14 +43,11 @@ export default function UserNavbar() {
                 <i className="fas fa-calendar-check"></i> My Bookings
               </a>
             </li>
-<<<<<<< HEAD
-=======
             <li className="nav-item">
               <a className="nav-link" href="/Maps">
                 <i className="fas fa-hospital"></i> Hospitals Nearby
               </a>
             </li>
->>>>>>> 6f759dc (Maps Implemented)
             {isLoggedin && (
               <li className="nav-item">
                 <button className="btn btn-outline-light mt-5" onClick={Logout}>

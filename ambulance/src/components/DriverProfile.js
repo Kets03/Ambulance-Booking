@@ -132,11 +132,7 @@ export default function DriverProfile() {
                   </select>
                 </div>
 
-<<<<<<< HEAD
                 <button type="submit" className="btn btn-primary mt-3">
-=======
-                <button type="submit" className="btn btn-primary mt-3" style={{ width: "100%" }}>
->>>>>>> 6f759dc (Maps Implemented)
                   Send for Approval
                 </button>
               </form>
