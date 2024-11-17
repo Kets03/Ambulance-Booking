@@ -18,7 +18,6 @@ export default function DriverProfile() {
         const data = response.data;
         setUserData(data);
 
-        // Check if any field is undefined or default "undefined" in the response
         if (data.registrationNo === "undefined" || data.licenseNo === "undefined" || data.type ==="undefined") {
           setIsProfileComplete(false);
         }
@@ -38,7 +37,6 @@ export default function DriverProfile() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Send the updated data to the backend
     axios
       .post("http://localhost:3001/updateDriverProfile", formData, {
         withCredentials: true,
@@ -46,7 +44,7 @@ export default function DriverProfile() {
       .then((response) => {
         console.log("Profile updated successfully:", response.data);
         setUserData({ ...userData, ...formData });
-        setIsProfileComplete(true); // Update the state to mark profile as complete
+        setIsProfileComplete(true); 
       })
       .catch((error) => {
         console.log("Error updating profile:", error);
@@ -132,7 +130,7 @@ export default function DriverProfile() {
                   </select>
                 </div>
 
-                <button type="submit" className="btn btn-primary mt-3">
+                <button type="submit" className="btn btn-primary mt-3" style={{ width: "170px",}}>
                   Send for Approval
                 </button>
               </form>
