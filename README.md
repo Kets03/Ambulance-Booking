@@ -5,6 +5,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
+- [User Manual](#user-manual)
 
 ## Introduction
 
@@ -43,6 +44,53 @@ The **Ambulance Booking System** is a web application that allows users to book 
 - **Express.js**: Web framework for Node.js.
 - **MongoDB**: NoSQL database to store user, driver, and booking information.
 - **Axios**: To make HTTP requests from frontend to backend.
+
+## Setup Instructions
+
+### Prerequisites
+- **Node.js** (v12 or later)
+- **MongoDB** (local or cloud-based instance)
+
+### Steps to Run the Project Locally
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/ambulance-booking.git
+   cd ambulance-booking-system
+2. **Open the server and ambulance app in separate terminals**
+
+## User Manual
+- 1.	**Home Page:**  
+ Visit the homepage where you will find the navigation bar with options
+like "Home," "Services," "Contact Us," and "Login."
+ Use the navbar to navigate through different sections of the site.
+
+- 2.	**User Panel:**
+After logging in, a user can access their profile, view and edit details, and book an ambulance.
+The user can select pickup and drop-off locations for booking and see the list of their active or previous bookings.
+
+- 3.	**Admin Panel:**  
+Admins can log in using their credentials to access the dashboard.
+From the admin dashboard, admins can approve driver details, view and manage all bookings.
+
+- 4.	**Driver Panel:**  
+ Drivers can log in to view the rides assigned to them.
+ The "Current Ride" section displays ride details, such as the passenger's
+ name, pickup, and drop locations. Drivers can use the "Start Ride" button to begin a ride and the "End Ride"  button to complete it.
+
+- 5. **Ride History:**  
+Both drivers and users can view ride history, filtering completed, ongoing, and rejected rides.
+Click "See Details" to get a detailed view of each ride, including date, pickup
+and drop locations.
+
+- 6.	**Booking Status:**  
+Users and drivers will receive real-time updates on the booking status, including whether a ride is accepted, rejected, or completed.
+
+- 7.	**Hospitals Nearby:**
+Provides users and drivers with a map displaying the locations of nearby hospitals helping them find medical assistance easily. Users can click on the hospital marker or its name in the list to get directions using external navigation tools like Google Maps.
+
+- 8.	**Logout:**  
+ Once finished, you can safely log out from your respective panel by clicking the "Logout" option from the navigation bar.
 
 ## ScreenShots
 
@@ -116,53 +164,3 @@ The **Ambulance Booking System** is a web application that allows users to book 
 **Booking Overview:**
 
 ![image](https://github.com/user-attachments/assets/941af9e9-b7cc-4d67-b7c6-f68cab7cae0f)
-
-
-## Setup Instructions
-
-### Prerequisites
-- **Node.js** (v12 or later)
-- **MongoDB** (local or cloud-based instance)
-
-### Steps to Run the Project Locally
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/ambulance-booking.git
-   cd ambulance-booking-system
-2. **Open the server and ambulance app in separate terminals**
-
-## User Manual
-- 1.	**Home Page:**  
- Visit the homepage where you will find the navigation bar with options
-like "Home," "Services," "Contact Us," and "Login."
- Use the navbar to navigate through different sections of the site.
-
-- 2.	**User Panel:**
-After logging in, a user can access their profile, view and edit details, and book an ambulance.
-The user can select pickup and drop-off locations for booking and see the list of their active or previous bookings.
-
-- 3.	**Admin Panel:**  
-Admins can log in using their credentials to access the dashboard.
-From the admin dashboard, admins can approve driver details, view and manage all bookings.
-
-- 4.	**Driver Panel:**  
- Drivers can log in to view the rides assigned to them.
- The "Current Ride" section displays ride details, such as the passenger's
- name, pickup, and drop locations. Drivers can use the "Start Ride" button to begin a ride and the "End Ride"  button to complete it.
-
-- 5. **Ride History:**  
-Both drivers and users can view ride history, filtering completed, ongoing, and rejected rides.
-Click "See Details" to get a detailed view of each ride, including date, pickup
-and drop locations.
-
-- 6.	**Booking Status:**  
-Users and drivers will receive real-time updates on the booking status, including whether a ride is accepted, rejected, or completed.
-
-- 7.	**Hospitals Nearby:**
-Provides users and drivers with a map displaying the locations of nearby hospitals helping them find medical assistance easily. Users can click on the hospital marker or its name in the list to get directions using external navigation tools like Google Maps.
-
-- 8.	**Logout:**  
- Once finished, you can safely log out from your respective panel by clicking the "Logout" option from the navigation bar.
-
-
