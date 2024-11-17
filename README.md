@@ -29,6 +29,9 @@ The **Ambulance Booking System** is a web application that allows users to book 
 ### Authentication
 - Secure login and registration for all users (Users, Drivers, Admins).
 
+### Map Integration
+- Users can click on the hospital marker or its name in the list to get directions using external navigation tools like Google Maps.
+
 ## Technologies Used
 
 ### Frontend
@@ -61,43 +64,58 @@ The **Ambulance Booking System** is a web application that allows users to book 
 
 **User Profile:**
 
-![image](https://github.com/user-attachments/assets/b52a5253-5546-4c3d-9568-14ddc66c54bb)
+![image](https://github.com/user-attachments/assets/cd49eda2-30f0-40da-a76b-c50f52452b36)
 
 **Book Ambulance:**
 
- ![image](https://github.com/user-attachments/assets/08287317-2eb5-4f24-9a8b-061e38e36b1e)
+ ![image](https://github.com/user-attachments/assets/9c5fce54-6baf-4f89-a352-3f25dbd47c34)
+
 
 **My Bookings:**
 
- ![image](https://github.com/user-attachments/assets/951d5ce3-74ea-4473-b84f-182cf3c1f586)
+ ![image](https://github.com/user-attachments/assets/7d21192e-48ae-46d2-980b-0d7584608042)
+
+**Hospitals Nearby**
+
+![image](https://github.com/user-attachments/assets/a5a308df-9b55-4a74-9eb4-69cb63a0954d)
+
 
 **Driver Profile:**
 
- ![image](https://github.com/user-attachments/assets/4ad5cd63-af4e-441b-a5e7-f5e7a48cd6ae)
+![image](https://github.com/user-attachments/assets/224bb760-03e7-4ad4-8e16-00a068a06e1d)
+
+
+![image](https://github.com/user-attachments/assets/ebc15a56-78d8-4a21-932e-2daffe522efa)
+
 
 **Current Ride:**
 
- ![image](https://github.com/user-attachments/assets/c242747e-3a4f-4179-9beb-32c51ea14594)
+ ![image](https://github.com/user-attachments/assets/c52320dc-507f-494b-ab67-d32d6d0ebd23)
+
 
 **Ride History:**
 
-![image](https://github.com/user-attachments/assets/d356912d-292b-4dbd-a2fc-6d347c4ee14e)
+![image](https://github.com/user-attachments/assets/0d6410cc-3193-4f83-8b4f-7d5b78a6125d)
+
 
 **Ride Request:**
 
- ![image](https://github.com/user-attachments/assets/f4edbccd-4d5c-48b7-826e-2a146b09e662)
+![image](https://github.com/user-attachments/assets/cb47ecc4-e65c-4e44-b9ba-92999b522e3d)
+
 
 **Admin Profile:**
 
- ![image](https://github.com/user-attachments/assets/1c3e970a-8c5a-41e0-b756-c671603e878c)
+ ![image](https://github.com/user-attachments/assets/d18d3d16-1eb6-4122-b7d3-644fa4e0630b)
+
 
 **Manage Drivers:**
 
- ![image](https://github.com/user-attachments/assets/110c22ee-0256-4329-bde3-b412bf894432)
+![image](https://github.com/user-attachments/assets/52b53501-c898-49ca-b3e1-d0c0c01c993c)
+
 
 **Booking Overview:**
 
-![image](https://github.com/user-attachments/assets/7d13da85-1274-426b-ad5f-3a665d260026)
+![image](https://github.com/user-attachments/assets/941af9e9-b7cc-4d67-b7c6-f68cab7cae0f)
 
 
 ## Setup Instructions
@@ -110,7 +128,41 @@ The **Ambulance Booking System** is a web application that allows users to book 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/ambulance-booking-system.git
+   git clone https://github.com/your-username/ambulance-booking.git
    cd ambulance-booking-system
 2. **Open the server and ambulance app in separate terminals**
+
+## User Manual
+- 1.	**Home Page:**  
+ Visit the homepage where you will find the navigation bar with options
+like "Home," "Services," "Contact Us," and "Login."
+ Use the navbar to navigate through different sections of the site.
+
+- 2.	**User Panel:**
+After logging in, a user can access their profile, view and edit details, and book an ambulance.
+The user can select pickup and drop-off locations for booking and see the list of their active or previous bookings.
+
+- 3.	**Admin Panel:**  
+Admins can log in using their credentials to access the dashboard.
+From the admin dashboard, admins can approve driver details, view and manage all bookings.
+
+- 4.	**Driver Panel:**  
+ Drivers can log in to view the rides assigned to them.
+ The "Current Ride" section displays ride details, such as the passenger's
+ name, pickup, and drop locations. Drivers can use the "Start Ride" button to begin a ride and the "End Ride"  button to complete it.
+
+- 5. **Ride History:**  
+Both drivers and users can view ride history, filtering completed, ongoing, and rejected rides.
+Click "See Details" to get a detailed view of each ride, including date, pickup
+and drop locations.
+
+- 6.	**Booking Status:**  
+Users and drivers will receive real-time updates on the booking status, including whether a ride is accepted, rejected, or completed.
+
+- 7.	**Hospitals Nearby:**
+Provides users and drivers with a map displaying the locations of nearby hospitals helping them find medical assistance easily. Users can click on the hospital marker or its name in the list to get directions using external navigation tools like Google Maps.
+
+- 8.	**Logout:**  
+ Once finished, you can safely log out from your respective panel by clicking the "Logout" option from the navigation bar.
+
 
